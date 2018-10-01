@@ -4,7 +4,7 @@
     </head>
     <body>
         {%for article in articles%}
-         <a href="article/{{article.id}}">{{article.title}}</a><br>
+         <a href="{% url 'blog:article_page' article.id %}">{{article.title}}</a><br>
         {%endfor%}
     </body>
      
