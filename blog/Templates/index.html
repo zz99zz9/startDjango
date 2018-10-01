@@ -2,5 +2,10 @@
     <head>
         <title>hello</title>
     </head>
-    <body>{{article.title}}<br><br>{{article.content}}</body>
+    <body>
+        {%for article in articles%}
+         <a href="article/{{article.id}}">{{article.title}}</a><br>
+        {%endfor%}
+    </body>
+     
 </html>

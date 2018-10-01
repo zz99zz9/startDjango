@@ -6,6 +6,10 @@ from django.http import HttpResponse
 from . import models
 
 def index(request):
-    article = models.Article.objects.get(pk=1)
-    return render(request,'index.html',{'article':article})
+    articles = models.Article.objects.all()
+    return render(request,'index.html',{'articles':articles})
     # return HttpResponse('hello,world!')
+
+def article_page(request,article_id):
+    article = models.Article.objects.get(pk=article_id)
+    return render(request,'article_page.html',{'article':article})
