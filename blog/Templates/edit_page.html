@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>edit</title>
+    </head>
+    <body>
+        <form action="{% url 'blog:edit_action' %}" method='post'>
+            {% csrf_token %}
+            <input type='text' name='title'><br>
+            <input type='text' name='content'><br>
+            <input type='submit'>
+        </form>
+    </body>
+</html>
